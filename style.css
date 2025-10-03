@@ -22,6 +22,37 @@ iframe {
   padding: 15px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
+#sidebar
+.sidebar {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  height: 100vh;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #007acc;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 40px;
+}
 .hidden {
   display: none;
 }
