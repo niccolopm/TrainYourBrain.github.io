@@ -13,7 +13,7 @@ scene.add(light);
 // Load brain model
 const loader = new THREE.GLTFLoader();
 let brain;
-loader.load('assets/brain.glb', function(gltf) {
+loader.load('<iframe src="https://clara.io/embed/c67b5288-7325-4a2f-a7aa-c1e8d74ebe44?renderer=webgl&timeline=true&autoplay=false&bgColor=0xffffff&tools=false" width="400" height="300" allowfullscreen></iframe>', function(gltf) {
   brain = gltf.scene;
   scene.add(brain);
   brain.rotation.y = Math.PI; // adjust orientation
