@@ -7,14 +7,16 @@
 </head>
 <body>
   <h1>Explore Your Brain</h1>
-  <div id="brain-container"></div>
-  <iframe src="https://clara.io/player/v2/{uuid}>
-    /player/v2/{uuid}?tools=false
-    /player/v2/{uuid}?tools.pan=hide
-    /player/v2/{uuid}?tools.pan=0&tools.zoom=hide
-    /player/v2/{uuid}?configurator.show=true
-    /player/v2/{uuid}?configurator.configuration={"Color":"Gray", "Size":"Large"}>
-    </iframe>
+<div id="brain-container">
+  <iframe 
+    src="https://clara.io/player/v2/YOUR-UUID-HERE?tools=false&tools.pan=hide&tools.zoom=hide&configurator.show=true&configurator.configuration={%22Color%22:%22Gray%22,%22Size%22:%22Large%22}" 
+    width="800" 
+    height="600" 
+    allowfullscreen 
+    frameborder="0">
+  </iframe>
+</div>
+
   <div id="info-card" class="hidden">
     <h2 id="area-name"></h2>
     <p id="area-function"></p>
