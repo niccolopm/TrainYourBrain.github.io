@@ -6,7 +6,7 @@ body {
 }
 #brain-container {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   margin: 100px 0;
 }
 iframe {
