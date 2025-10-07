@@ -8,37 +8,58 @@
 <body>
   <h1>Explore Your Brain</h1>
 <div id="brain-container">
-  <div class="sidebar">
-  <ul>
-    <li><a href="index.html"><span class="icon">🏠</span><span class="label">Home</span></a></li>
-    <li><a href="games/memory.html"><span class="icon">🧠</span><span class="label">Memory</span></a></li>
-    <li><a href="games/attention.html"><span class="icon">🎯</span><span class="label">Attention</span></a></li>
-    <li><a href="games/spatial.html"><span class="icon">📐</span><span class="label">Spatial</span></a></li>
-  </ul>
-</div>
-
-<div class="main-content">
-  <h1>Welcome to Brain Games Hub</h1>
-  <p>Select a brain area from the sidebar to train it!</p>
-  <!-- Your 3D brain iframe or viewer goes here -->
-</div>
-
-<iframe 
-    src="https://clara.io/player/v2/25ca638e-16c2-4d87-8fb6-70cf6b42edcf?tools=false&tools.pan=hide&tools.zoom=hide&configurator.show=true&configurator.configuration={%22Color%22:%22Gray%22,%22Size%22:%22Large%22}" 
-    width="800" 
-    height="600" 
-    allowfullscreen 
-    frameborder="0">
-  </iframe>
-</div>
-
-  <div id="info-card" class="hidden">
-    <h2 id="area-name"></h2>
-    <p id="area-function"></p>
-    <a id="train-link" href="#" target="_blank">TRAIN IT</a>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.150.0/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.150.0/examples/js/loaders/GLTFLoader.js"></script>
-  <script src="script.js"></script>
-</body>
+  <div class="btn">
+      <span class="fas fa-bars"></span>
+    </div>
+    <nav class="sidebar">
+      <div class="text">Sidebar Dropdown</div>
+      <ul>
+        <li class="active"><a href="#">Dashboard</a></li>
+        <li>
+          <a href="#" class="feat-btn"
+            >Features
+            <span class="fas fa-caret-down first"></span>
+          </a>
+          <ul class="feat-show">
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Elements</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="serv-btn"
+            >Services
+            <span class="fas fa-caret-down second"></span>
+          </a>
+          <ul class="serv-show">
+            <li><a href="#">App Design</a></li>
+            <li><a href="#">Web Design</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Shortcuts</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <div class="header">Sidebar Dropdown Using HTML CSS & JavaScript.</div>
+    </div>
+    <script>
+      $(".btn").click(function () {
+        $(this).toggleClass("click");
+        $(".sidebar").toggleClass("show");
+      });
+      $(".feat-btn").click(function () {
+        $("nav ul .feat-show").toggleClass("show");
+        $("nav ul .first").toggleClass("rotate");
+      });
+      $(".serv-btn").click(function () {
+        $("nav ul .serv-show").toggleClass("show1");
+        $("nav ul .second").toggleClass("rotate");
+      });
+      $("nav ul li").click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+      });
+    </script>
+  </body>
 </html>
